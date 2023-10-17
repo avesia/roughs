@@ -1,0 +1,9 @@
+/dist
+
+# Javascript
+.parcel-cache
+node_modules
+
+# Rust
+target
+Cargo.lock

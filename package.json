@@ -1,0 +1,27 @@
+{
+  "name": "avesia",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "watch:renderer": "vite --port 5253",
+    "build:renderer": "vite build",
+    "build:preload": "tsc -p tsconfig.preload.json",
+    "build:main": "tsc -p tsconfig.main.json",
+    "run:electron": "cross-env AVESIA_APP_DEV=true electron dist/main.js",
+    "run:app": "run-s build:preload build:main run:electron",
+    "dev": "run-p watch:renderer run:app"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.6",
+    "cross-env": "^7.0.3",
+    "electron": "^26.3.0",
+    "npm-run-all": "^4.1.5",
+    "svelte": "^4.2.1",
+    "tsx": "^3.13.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11"
+  },
+  "dependencies": {
+    "lit": "^3.0.0"
+  }
+}
