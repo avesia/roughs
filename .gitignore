@@ -1,5 +1,7 @@
 /dist
 
+.vscode
+
 # Javascript
 .parcel-cache
 node_modules
