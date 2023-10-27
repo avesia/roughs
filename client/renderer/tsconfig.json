@@ -6,6 +6,6 @@
       "useDefineForClassFields": false,
     },
     "include": [
-      "client/renderer.ts"
+      "renderer.ts"
     ]
 }

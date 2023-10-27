@@ -24,7 +24,6 @@ export class AvesiaAppElement extends LitElement {
 
     _inputChanged(e: Event) {
         this.name = (e.target as HTMLInputElement).value;
-        console.log((e.target as HTMLInputElement).value);
     }   
 
     render(){
