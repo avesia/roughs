@@ -10,7 +10,7 @@
     "run:electron": "cross-env AVESIA_APP_DEV=true electron dist/main.js",
     "run:desktop": "run-s build:preload build:main run:electron",
     "dev:desktop": "run-p watch:renderer run:desktop",
-    "dev:web": "watch:renderer"
+    "dev:web": "run-p watch:renderer"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.6",
