@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "commonjs",
+        "sourceMap": true,
+    },
+    "include": [
+        "client/main.ts",
+        "client/preload.ts"
+    ]
+}

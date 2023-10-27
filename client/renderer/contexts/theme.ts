@@ -1,0 +1,63 @@
+import { createContext } from '@lit/context';
+import { ColorPalette } from '../../app/theme';
+
+export const currentColorPalette = createContext<ColorPalette>({
+    baseBackground: "#ebf7ee",
+    baseBackgroundInactive: "#c4cfc7",
+    baseBackgroundShadow: "#898c8a",
+    baseBackgroundShadowInactive: "#898c8a",
+    baseBorder: "#7ea888",
+    baseBorderInactive: "#94A394",
+    baseText: "#0A544B",
+    baseTextInactive: "#718A78",
+    baseTextTitle: "#001412",
+    baseTextTitleInactive: "#677E7B",
+    baseTextSubtle: "#53817B",
+    baseTextSubtleInactive: "#78968F",
+
+    primaryBackground: "#EBF7F7",
+    primaryBackgroundInactive: "#CCD7DF",
+    primaryBackgroundShadow: "#7EAAD3",
+    primaryBackgroundShadowInactive: "#7EAAD3",
+    primaryBorder: "#2E80E1",
+    primaryBorderInactive: "#809BB5",
+    primaryText: "#152F71",
+    primaryTextInactive: "#7B8BB6",
+    primaryTextTitle: "#0D3B5C",
+    primaryTextTitleInactive: "#5A819C",
+    primaryTextSubtle: "#5A74B5",
+    primaryTextSubtleInactive: "#899DCE",
+
+    secondaryBackground: "#F7F7F7",
+    secondaryBackgroundInactive: "#DBDBDB",
+    secondaryBackgroundShadow: "#ACACAC",
+    secondaryBackgroundShadowInactive: "#ACACAC",
+    secondaryBorder: "#B0B0B0",
+    secondaryBorderInactive: "#A8A8A8",
+    secondaryText: "#323744",
+    secondaryTextInactive: "#8E94A3",
+    secondaryTextTitle: "#363E44",
+    secondaryTextTitleInactive: "#7B8790",
+    secondaryTextSubtle: "#5D6271",
+    secondaryTextSubtleInactive: "#979EAE",
+
+    successBackground: "#C0DFCE",
+    successBackgroundShadow: "#056833",
+    successBorder: "#518049",
+    successText: "#033411",
+
+    warningBackground: "#E4E1AE",
+    warningBackgroundShadow: "#748F0B",
+    warningBorder: "#A49F23",
+    warningText: "#342403",
+
+    dangerBackground: "#E4BEAE",
+    dangerBackgroundShadow: "#8F1B0B",
+    dangerBorder: "#A43A23",
+    dangerText: "#341803",
+
+    infoBackground: "#AECDE4",
+    infoBackgroundShadow: "#0B478F",
+    infoBorder: "#2376A4",
+    infoText: "#031134",
+});

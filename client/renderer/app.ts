@@ -1,10 +1,10 @@
 import { LitElement, html, css } from 'lit';
-import { customElement, state } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 export * from "./components/widgets/button"
 
 @customElement('avesia-app')
-export class MyElement extends LitElement {
+export class AvesiaAppElement extends LitElement {
     static styles = css`
         :host {
             user-select: none;
@@ -19,22 +19,18 @@ export class MyElement extends LitElement {
         }
     `;
 
-    @state()
-    name: string;
-
-    constructor() {
-        super();
-        this.name = "a"
-    }
+    @property()
+    name?: string;
 
     _inputChanged(e: Event) {
         this.name = (e.target as HTMLInputElement).value;
+        console.log((e.target as HTMLInputElement).value);
     }   
 
     render(){
         return html`
             <main>
-                <input @input=${this._inputChanged} .value=${this.name}>
+                <input @input=${this._inputChanged}>
                 <span>Hello world ${this.name}</span>
                 <a-button>${this.name}</a-button>
             </main>

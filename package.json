@@ -13,6 +13,7 @@
     "dev:web": "run-p watch:renderer"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
     "@sveltejs/vite-plugin-svelte": "^2.4.6",
     "cross-env": "^7.0.3",
     "electron": "^26.3.0",
