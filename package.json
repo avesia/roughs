@@ -8,8 +8,9 @@
     "build:preload": "tsc -p tsconfig.preload.json",
     "build:main": "tsc -p tsconfig.main.json",
     "run:electron": "cross-env AVESIA_APP_DEV=true electron dist/main.js",
-    "run:app": "run-s build:preload build:main run:electron",
-    "dev": "run-p watch:renderer run:app"
+    "run:desktop": "run-s build:preload build:main run:electron",
+    "dev:desktop": "run-p watch:renderer run:desktop",
+    "dev:web": "watch:renderer"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.6",
