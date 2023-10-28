@@ -4,8 +4,7 @@ import { customElement, property, state } from "lit/decorators.js";
 import { styleMap } from "lit/directives/style-map.js";
 
 import { currentColorTheme, currentStyleValues } from "../../contexts/theme";
-import { ColorTheme } from "../../../app/colorTheme";
-import { StyleValues } from "../../../app/styles";
+import { ColorTheme, StyleValues } from "../../../app/app";
 
 @customElement("avs-button")
 export class Button extends LitElement {
