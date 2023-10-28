@@ -7,8 +7,14 @@ import { currentColorTheme, currentStyleValues } from "../../contexts/theme";
 import { ColorTheme } from "../../../app/colorTheme";
 import { StyleValues } from "../../../app/styles";
 
-@customElement("avs-button")
-export class Button extends LitElement {
+/**
+ * 
+ * Tag name: `avs-input`  
+ * To get a value when it changed, listen `inputValue` event and get value from `e.detail.value`
+ * 
+ *  */
+@customElement("avs-input")
+export class Input extends LitElement {
     @consume({
         context: currentColorTheme,
         subscribe: true,
@@ -40,6 +46,10 @@ export class Button extends LitElement {
         this.hovered = false;
     }
 
+    private _dispatchInputEvent(e: Event) {
+        this.dispatchEvent(new CustomEvent("inputValue", {detail: { value: (e.target as HTMLInputElement).value }, bubbles: true, cancelable: true, composed: true}));
+    }
+
     static styles = css`
         button {
             padding: 6px 12px;
@@ -65,10 +75,9 @@ export class Button extends LitElement {
             fontFamily: this.styleValues.fontFamily,
             color: this.colorTheme.controls[this.variant].text,
         }
+
         return html`
-            <button style=${styleMap(styles)} ?disabled=${this.disabled}>
-                <slot>
-            </button>
+            <input @input=${this._dispatchInputEvent} style=${styleMap(styles)} ?disabled=${this.disabled} />
         `;
     }
 
