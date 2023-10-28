@@ -9,6 +9,7 @@ import { StyleValues } from "../app/styles";
 
 export * from "./components/widgets/button"
 export * from "./components/widgets/input"
+export * from "./components/widgets/dock"
 
 @customElement("avesia-app")
 export class AvesiaAppElement extends LitElement {

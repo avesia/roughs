@@ -5,8 +5,7 @@ import { styleMap } from "lit/directives/style-map.js";
 import { classMap } from "lit/directives/class-map.js";
 
 import { currentColorTheme, currentStyleValues } from "../../contexts/theme";
-import { ColorTheme } from "../../../app/colorTheme";
-import { StyleValues } from "../../../app/styles";
+import { ColorTheme, StyleValues } from "../../../app/app";
 
 /**
  * 
