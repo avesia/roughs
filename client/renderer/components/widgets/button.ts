@@ -14,7 +14,7 @@ export class Button extends LitElement {
         subscribe: true,
     })
     @property({ attribute: false })
-    colorTheme: ColorTheme = {styles: {}, labels: {}, controls: {}};
+    colorTheme: ColorTheme = {styles: {}, labels: {}, controls: {}, input: {}};
 
     @consume({
         context: currentStyleValues,

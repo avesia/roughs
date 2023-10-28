@@ -1,7 +1,8 @@
 export interface ColorTheme {
-    styles: GeneralStyleVariants,    
-    controls: ControlVariants,
+    styles: GeneralStyleVariants,
     labels: LabelVariants,
+    controls: ControlVariants,
+    input: InputColorTheme,
 }
 
 interface GeneralStyleVariants {
@@ -48,6 +49,21 @@ interface LabelColorTheme {
     backgroundShadow?: string,
     border?: string,
     text?: string,
+}
+
+interface InputColorTheme {
+    background?: string,
+    backgroundActive?: string,
+    backgroundDisabled?: string,
+    border?: string,
+    borderActive?: string,
+    borderDisabled?: string,
+    text?: string,
+    textActive?: string,
+    textDisabled?: string,
+    placeholder?: string,
+    placeholderActive?: string,
+    placeholderDisabled?: string,
 }
 
 export const defaultColorTheme: ColorTheme = {
@@ -126,7 +142,7 @@ export const defaultColorTheme: ColorTheme = {
     controls: {
         "primary": {
             background: "#3A443C",
-            backgroundHovered: "#333E36",
+            backgroundHovered: "#252D27",
             backgroundDisabled: "#8F9A92",
             border: "#7D9783",
             borderHovered: "#7D9783",
@@ -137,7 +153,7 @@ export const defaultColorTheme: ColorTheme = {
         },
         "secondary": {
             background: "#49708C",
-            backgroundHovered: "#607483",
+            backgroundHovered: "#374F60",
             backgroundDisabled: "#7895AA",
             border: "#869CD4",
             borderHovered: "#869CD4",
@@ -157,5 +173,20 @@ export const defaultColorTheme: ColorTheme = {
             textHovered: "#EEEEEE",
             textDisabled: "#C2C2C2",
         }
+    },
+
+    input: {
+        background: "#C0D5C5",
+        backgroundActive: "#C0D5C5",
+        backgroundDisabled: "#ACACAC",
+        border: "#7E8E81",
+        borderActive: "#009B1F",
+        borderDisabled: "#7E8E81",
+        text: "#0A544B",
+        textActive: "#0A544B",
+        textDisabled: "#D5D5D5",
+        placeholder: "#A0A0A0",
+        placeholderActive: "#A0A0A0",
+        placeholderDisabled: "#D5D5D5"
     }
 };

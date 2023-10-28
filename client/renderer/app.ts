@@ -28,7 +28,6 @@ export class AvesiaAppElement extends LitElement {
     }
 
     _inputChanged(e: CustomEvent) {
-        console.log(e.detail)
         this.name = e.detail.value;
     }
 
@@ -44,7 +43,7 @@ export class AvesiaAppElement extends LitElement {
         }
     `;
 
-    render(){
+    render() {
         const styles = {
             background: this.colorTheme.styles["base"].background,
             color: this.colorTheme.styles["base"].text,
@@ -53,7 +52,8 @@ export class AvesiaAppElement extends LitElement {
 
         return html`
             <main style=${styleMap(styles)}>
-                <avs-input @inputValue=${this._inputChanged}></avs-input>
+                <avs-input @inputValue=${this._inputChanged} placeholder="Type here to search project..."></avs-input>
+                <avs-input disabled=${true} placeholder="Type here to search project..."></avs-input>
                 <span>Hello world ${this.name}</span>
                 <avs-button><span>${this.name}</span></avs-button>
                 <avs-button variant="secondary"><span>${this.name}</span></avs-button>
